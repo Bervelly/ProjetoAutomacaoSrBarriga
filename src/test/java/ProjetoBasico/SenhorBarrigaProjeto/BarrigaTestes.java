@@ -15,7 +15,7 @@ public class BarrigaTestes extends BasePage {
     @Test
     public void inserirConta(){
         menu.criarConta();
-        contas.preencherNome("Ana Julia");
+        contas.preencherNome("Laura Almeida");
         contas.salvarNome();
         Assert.assertEquals("Conta adicionada com sucesso!",
                 dsl.obterTexto(By.xpath("//div[@class='alert alert-success']")));
