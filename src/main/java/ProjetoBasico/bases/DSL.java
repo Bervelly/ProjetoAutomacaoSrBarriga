@@ -30,11 +30,8 @@ public class DSL {
     public void clicarBotão(String id) {
         DriverFactory.getDriver().findElement(By.id(id)).click();
     }
-    public void clicarBotaoBy (By by){
-        DriverFactory.getDriver().findElement(by).click();
-    }
 
-    public void clicarBotãoRadio(By by){
+    public void clicarBotãoBy(By by){
         DriverFactory.getDriver().findElement(by).click();
     }
 

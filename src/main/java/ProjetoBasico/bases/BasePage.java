@@ -18,7 +18,7 @@ public class BasePage {
         DriverFactory.getDriver().navigate().to("https://seubarriga.wcaquino.me/login");
         dsl.escrever("email", "bervelly@gmail");
         dsl.escrever("senha","1234");
-        dsl.clicarBotãoRadio(By.xpath("//button[@type='submit']"));
+        dsl.clicarBotãoBy(By.xpath("//button[@type='submit']"));
         Assert.assertEquals("Bem vindo, bervelly!",
                 dsl.obterTexto(By.xpath("//*[@role='alert']")));
     }
