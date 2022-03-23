@@ -20,6 +20,15 @@ public class BarrigaTestes extends BasePage {
         Assert.assertEquals("Conta adicionada com sucesso!",
                 dsl.obterTexto(By.xpath("//div[@class='alert alert-success']")));
     }
+
+    @Test
+    public void inserirConta2(){
+        menu.criarConta();
+        contas.preencherNome("Laura");
+        contas.salvarNome();
+        Assert.assertEquals("Conta adicionada com sucesso!",
+                dsl.obterTexto(By.xpath("//div[@class='alert alert-success']")));
+    }
 }
 
 
