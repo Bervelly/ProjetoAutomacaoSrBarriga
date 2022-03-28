@@ -9,11 +9,19 @@ public class MenuPage extends BasePage {
         dsl.clicarLink("Contas");
         dsl.clicarLink("Adicionar");
     }
+
     public void listaContas(){
         dsl.clicarLink("Contas");
         dsl.clicarLink("Listar");
     }
+
     public void criarMovimentacao(){
         dsl.clicarLink("Criar Movimentação");
     }
+
+    public void verResumoMensal(){
+        dsl.clicarLink("Resumo Mensal");
+    }
+
 }
+
