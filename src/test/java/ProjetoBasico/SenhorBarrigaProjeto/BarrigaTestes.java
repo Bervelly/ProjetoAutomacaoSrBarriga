@@ -6,6 +6,8 @@ import ProjetoBasico.homePage.*;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -111,6 +113,17 @@ public class BarrigaTestes extends BasePage {
         listas.excluirConta();
         Assert.assertEquals("Conta em uso na movimentações",
                 dsl.obterTexto(By.xpath("//*[@class='alert alert-danger']")));
+    }
+
+    @Test
+    public void verificarSaldoResumoZerado(){
+        menu.verResumoMensal();
+        resumo.obterMes("Março");
+        resumo.obterAno("2020");
+        resumo.clicarBuscar();
+        List <WebElement> elementosEncontrados =
+            DriverFactory.getDriver().findElements(By.xpath("//*[@id='tabelaExtrato']/tbody/tr"));
+        Assert.assertEquals(0, elementosEncontrados.size());
     }
 
 }
